@@ -1,0 +1,135 @@
+* {
+  background-color: #fbffa8;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.left-minions {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  z-index: 2;
+}
+.left1 {
+  height: 170px;
+  width: 200px;
+  animation: floating 15s ease infinite;
+}
+
+.right-minions {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20%;
+  right: 0;
+  z-index: 2;
+}
+
+.right2 {
+  top: 100px;
+  height: 200px;
+  width: 250px;
+  animation: floating1 15s ease infinite;
+}
+.coin-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coin-search {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: 10px 0 30px 0;
+}
+.coin-text {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: rgb(32, 182, 179);
+  text-shadow: 0 0 14px #898a8a;
+  font-weight: 700;
+  text-align: center;
+}
+
+.coin-input {
+  padding: 0 20px 10px 20px;
+  border: none;
+  border-bottom: 3px solid #027a78;
+  color: rgb(51, 50, 50);
+  text-align: center;
+}
+::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  opacity: 0.5;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes floating1 {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 1285px) {
+  .left-minions,
+  .right-minions {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .coin-text {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 542px) {
+  .coin-text {
+    font-size: 3rem;
+    font-weight: 900;
+    text-shadow: none;
+  }
+}
